@@ -141,11 +141,14 @@ military_clean <- military |>
 
 ```{r}
 #| label: inspecting-what-regions-were-not-removed
+#| hi
 
 military_clean |> 
   filter(if_all(.cols = -Country,   #hint: what is the easiest way to include every column except `Country`
                 .fns = is.na)    #hint: what function in R (there are several) tests if a value is missing or is NA?
          )
+
+
 ```
 
 
