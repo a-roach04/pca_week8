@@ -82,7 +82,7 @@ military <- read_xlsx("data/gov_spending_per_capita.xlsx",  # read in the xlsx f
                       sheet = "Share of Govt. spending",    # select sheet labeled share of govt spending
                       skip  = 7,                            # skip the first seven rows
                       n_max = 191,                          # specify there will be 191 rows of data
-                      na = c("xxx", ".."))                  # specify how NAs are coded
+                      na = c("xxx", ". ."))                  # specify how NAs are coded
 ```
 
 *I would highly recommend you open the dataset in Excel, so you can see the data layout!*
