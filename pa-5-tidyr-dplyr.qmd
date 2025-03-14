@@ -130,7 +130,7 @@ military_clean <- military |>
 
 **2. Write a sentence describing what the line of code `filter(!Country %in% regions)` is doing in the context of the data.**  
 
->Insert Answer Here
+> If there is no country in the region variable it takes it out.
 
 
 ### Canvas Question #1
@@ -141,11 +141,14 @@ military_clean <- military |>
 
 ```{r}
 #| label: inspecting-what-regions-were-not-removed
+#| hi
 
 military_clean |> 
-  filter(if_all(.cols = _________,   #hint: what is the easiest way to include every column except `Country`
-                .fns = __________)   #hint: what function in R (there are several) tests if a value is missing or is NA?
+  filter(if_all(.cols = -Country,   #hint: what is the easiest way to include every column except `Country`
+                .fns = is.na)    #hint: what function in R (there are several) tests if a value is missing or is NA?
          )
+
+
 ```
 
 
